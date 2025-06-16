@@ -1,4 +1,3 @@
-
 from datetime import datetime
 
 
@@ -139,7 +138,7 @@ def ver_log_operacoes():
 
 def realizar_devolucao():
     cpf = input("CPF do usuário: ")
-    titulo = input("Título do livro a devolver: ")
+    titulo = input("Título do livro para devolução: ")
     emprestimo_encontrado = None
     for e in emprestimos:
         if e.usuario.cpf == cpf and e.livro.titulo == titulo:
@@ -173,7 +172,6 @@ def menu():
         print("\n1. Cadastrar livro\n2. Cadastrar usuário\n3. Realizar empréstimo\n4. Listar livros\n5. Listar empréstimos\n6. Ver log de operações\n7. Realizar devolução\n8. Ver histórico de devoluções\n9. Sair")
         op = input("Escolha uma opção: ")
         if op == "9":
-            print("Saindo...")
             break
         func = opcoes.get(op)
         func() if func else print("Opção inválida.")
@@ -181,7 +179,3 @@ def menu():
 if __name__ == "__main__":
     menu()
 
-
-
-
-# Nome: Guilherme ferreira novaes RA: 1991900
