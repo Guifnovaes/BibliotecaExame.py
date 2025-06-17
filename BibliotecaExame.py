@@ -7,7 +7,7 @@ emprestimos = []
 livros_set = set()
 
 
-class No:
+class Memoria:
     def __init__(self, valor):
         self.valor = valor
         self.proximo = None
@@ -17,7 +17,7 @@ class ListaEncadeada:
         self.inicio = None
 
     def inserir(self, valor):
-        novo = No(valor)
+        novo = Memoria(valor)
         if not self.inicio:
             self.inicio = novo
         else:
@@ -32,7 +32,7 @@ class ListaEncadeada:
             print(f"{atual.valor[0]} cadastrado: {atual.valor[1]}")
             atual = atual.proximo
 
-class NoDuplo:
+class Armazenamento:
     def __init__(self, valor):
         self.valor = valor
         self.proximo = None
@@ -44,7 +44,7 @@ class ListaDuplamenteEncadeada:
         self.fim = None
 
     def inserir(self, valor):
-        novo = NoDuplo(valor)
+        novo = Armazenamento(valor)
         if not self.inicio:
             self.inicio = self.fim = novo
         else:
