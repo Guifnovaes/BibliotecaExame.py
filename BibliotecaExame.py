@@ -38,7 +38,7 @@ class Armazenamento:
         self.proximo = None
         self.anterior = None
         
-class ListaDuplamenteEncadeada:
+class ListaDevolucoesDupla:
     def __init__(self):
         self.inicio = None
         self.fim = None
@@ -61,7 +61,7 @@ class ListaDuplamenteEncadeada:
 
 
 log_operacoes = ListaEncadeada()
-historico_devolucoes = ListaDuplamenteEncadeada()
+historico_devolucoes = ListaDevolucoesDupla()
 
 
 class Livro:
